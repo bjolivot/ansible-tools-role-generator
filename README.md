@@ -4,6 +4,9 @@ Ansible Role Generator
 Playbook for creating default new ansible role file structure
 
 
+/!\ Work in progress :o)
+
+
 Mandatory Vars
 --------------
 role_name : mandatory 
