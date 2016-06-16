@@ -1,0 +1,7 @@
+- name: generate role
+  hosts: localhost
+  roles:
+    - { role: generator, tags: pwet }
+
+
+

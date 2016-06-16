@@ -1,0 +1,9 @@
+---
+- name: create new role directory
+  file: path="{{new_role_path}}/{{new_role_name}}" state=directory
+
+- name: create directory structure
+  synchronize: src={{ role_path}}/files/skeleton/ dest="{{new_role_path}}/{{new_role_name}}/"
+
+
+

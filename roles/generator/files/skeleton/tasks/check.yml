@@ -1,0 +1,29 @@
+---
+# here comes env checking
+#
+#
+# Don't forget tags: check 
+# 
+#
+#
+# Check var is defined :
+#
+# - name: Check new_role_path var
+#   debug: msg="Cheking {{ new_role_path | mandatory  }} "
+#   tags: check
+#
+#
+#
+#
+#
+# Check if directory does not exists (fail if exist) :
+#
+# - name: check "{{ mydir }}" directory exists
+#   stat: path="{{ mydir }}"
+#   register: p
+#   tags: check
+
+# - fail: msg="Path {{ mydir }} allready exists, start playbook with override=true extra arg"
+#   when: p.stat.isdir is defined
+#   tags: check
+

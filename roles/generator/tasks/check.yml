@@ -1,0 +1,17 @@
+---
+- name: Check new_role_name var
+  debug: msg="Cheking {{ new_role_name | mandatory  }} "
+  tags: check
+
+- name: Check new_role_path var
+  debug: msg="Cheking {{ new_role_path | mandatory  }} "
+  tags: check
+
+- name: check "{{new_role_path}}/{{new_role_name}}" directory exists
+  stat: path="{{new_role_path}}/{{new_role_name}}"
+  register: p
+  tags: check
+
+- fail: msg="Path {{new_role_path}}/{{new_role_name}} allready exists, start playbook with override=true extra arg"
+  when: p.stat.isdir is defined and override==false
+  tags: check
