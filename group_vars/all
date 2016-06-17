@@ -1,1 +1,14 @@
-new_role_path: /home/ben/ansible/dev_roles
+#
+# where do you want to put you
+new_role_path: "~/ansible/dev_roles"
+
+# put here copyright infos
+#
+new_role_creator: "Benjamin JOLIVOT"
+new_role_year:  {{ ansible_date_time.year }}
+
+
+new_role_description: "{{ new_role_name }}"
+
+# override existing directory 
+override: false

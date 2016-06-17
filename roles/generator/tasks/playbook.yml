@@ -3,7 +3,13 @@
   file: path="{{new_role_path}}/{{new_role_name}}" state=directory
 
 - name: create directory structure
-  synchronize: src={{ role_path}}/files/skeleton/ dest="{{new_role_path}}/{{new_role_name}}/"
+  synchronize: src={{ role_path }}/files/skeleton/ dest="{{new_role_path}}/{{new_role_name}}/"
 
+- name: add licence file
+  template: src=LICENSE.j2 dest="{{new_role_name}}/LICENSE"
 
+- name: add README file
+  template: src=README.j2 dest="{{new_role_name}}/README"
 
+- name: add meta.yml file
+  template: src=meta_main.yml.j2 dest="{{new_role_name}}/meta/main.yml"

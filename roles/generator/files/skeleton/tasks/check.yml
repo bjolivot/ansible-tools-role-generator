@@ -8,8 +8,8 @@
 #
 # Check var is defined :
 #
-# - name: Check new_role_path var
-#   debug: msg="Cheking {{ new_role_path | mandatory  }} "
+# - name: Check myvar var
+#   debug: msg="Cheking {{ myvar | mandatory  }} "
 #   tags: check
 #
 #
@@ -22,7 +22,7 @@
 #   stat: path="{{ mydir }}"
 #   register: p
 #   tags: check
-
+#
 # - fail: msg="Path {{ mydir }} allready exists, start playbook with override=true extra arg"
 #   when: p.stat.isdir is defined
 #   tags: check

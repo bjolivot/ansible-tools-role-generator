@@ -9,13 +9,15 @@ Playbook for creating default new ansible role file structure
 
 Mandatory Vars
 --------------
-role_name : mandatory 
-role_path : mandatory (without rolename, ie will create {{role_path}}/{{role_name}} directory)
+new_role_name : mandatory 
+new_role_path : mandatory (without rolename, ie will create {{role_path}}/{{role_name}} directory)
 
 
 
 Optional Vars
 -------------
+
+new_role_creator : used in README and LICENSE files for copyright 
 
 
 
