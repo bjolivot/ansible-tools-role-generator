@@ -12,5 +12,5 @@ then
     exit 1
 fi 
 
-echo pwet
+
 ansible-playbook generate_role.yml -e "new_role_name=$1 new_role_path=$2"
