@@ -27,3 +27,11 @@
 #   when: p.stat.isdir is defined
 #   tags: check
 
+
+# check multiple vars :
+#
+# - fail: msg="Variable '{{ item }}' is not defined"
+#   when: item not in vars
+#   with_items: 
+#     - we_username
+#     - we_working_root_dir
