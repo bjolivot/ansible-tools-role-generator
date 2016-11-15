@@ -38,8 +38,16 @@
 
 
 ### services
-# - name: ensure supervisor is restarted
-#   service: name=supervisor state=restarted
+# - name: restart service
+#   service: 
+#     name: supervisor
+#     state: restarted
+
+# - name: ensure service is started and auto starting at boot
+#   service: 
+#     name: supervisor
+#     state: started
+#     enabled: true
 
 
 ###shell
